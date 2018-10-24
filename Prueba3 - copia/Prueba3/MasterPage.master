@@ -25,20 +25,52 @@
       <p class="" style="color:black;">ASP.net C#</p>
     </div>
     <div  class="active has-sub" id="topnav" style="position:fixed; margin-left:240px; left:260px; top:40px; height: 68px; " ><!-- menu -->
-      <ul>
+      
+          <% 
+    //abajo es para logueados, arriba es para un visitante del sitio
+    if (Prueba3.DatosEstaticos.logeado == true)
+    {
+        if (Prueba3.DatosEstaticos.TipoUser == "Cliente")
+        {
+                  %>
+                        <!--Opciones Cliente-->
         <li class="active"><a href="default.aspx">Inicio</a></li>
         <li><a href="Catalogo.aspx">Catalogo</a></li>
-        <li><a href="Clientes.aspx">Registro</a></li>
-           <li><a href="Perfil.aspx">Perfil</a></li>
+        <li><a href="Perfil.aspx">Perfil</a></li>
         <li><a href="#">Opciones de usuario</a>
           <ul>
-            <li><a href="Iniciar Sesion.aspx">Iniciar Sesion</a></li>
-            <li><a href="pagereporteclientes.aspx">Compras</a></li>            
-              <li><a href=" pagevistaventas.aspx">Ventas</a></li>
-              <li><a href="Contactos.aspx">Contactos</a></li>
+            <li><a href="Contactos.aspx">Contactos</a></li>
             <li><a href="#">Cerrar Sesion</a></li>
           </ul>
         </li>
+          <%}
+    else if (Prueba3.DatosEstaticos.TipoUser == "Administrador")
+    {%>
+                            <!--Opciones admin-->
+          <li class="active"><a href="default.aspx">Inicio</a></li>
+          <li><a href="Catalogo.aspx">Catalogo</a></li>
+          <li><a href="Perfil.aspx">Perfil</a></li>
+            <li><a href="#">Opciones de usuario</a>
+            <ul>
+           <li><a href="~/AgregarProductos.aspx">Agregar Productos</a></li>
+           <li><a href="~/Productos Registrados.aspx">Productos Registrados</a></li>
+           <li><a href="#">Usuarios registrados</a></li>  
+           <li><a href="pagereporteclientes.aspx">Compras</a></li>            
+           <li><a href=" pagevistaventas.aspx">Ventas</a></li>
+            </ul>
+            </li>
+          <% }
+    } else
+    { %>
+         <!--  <li><a href="Perfil.aspx">logeate o comes kk</a></li>-->
+        <ul>
+        <li class="active"><a href="default.aspx">Inicio</a></li>
+        <li><a href="Iniciar Sesion.aspx">Iniciar Sesion</a></li>    
+        <li><a href="Catalogo.aspx">Catalogo</a></li>
+        <li><a href="Clientes.aspx">Registro</a></li>
+        <li><a href="Clientes.aspx">Quienes somos?</a></li>
+           
+          <% }%>
         <!--<li class="last"><a href="#">Salir</a></li>-->
       </ul>
     </div>

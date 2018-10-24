@@ -11,22 +11,20 @@ namespace Prueba3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            foreach(var a in new N2().CategoriaProducto.ToList())
+            DDLCategoria.Items.Add(a.Nombre.ToString());
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            var conn = new N1();
+            var conn = new N2();
             var n2 = new Productos()
             {
-
-                IdProductos = 1,
+                IdProductos = 50, 
                 Nombre = TextNom.Text,
-                //Descripcion = TextDesp.Text,
-                //Proveedor = TextProe.Text,
                 PrecioCompra = Convert.ToDecimal(txtPrecioCompra.Text),
                 PrecioVenta = Convert.ToDecimal(txtPrecioVenta.Text),
-                IdCategoria = 1,
+                IdCategoria = new N2().CategoriaProducto.Where(ST => ST.Nombre == DDLCategoria.SelectedItem.Text).First().IdCategoria
             };
             conn.Productos.Add(n2);
             conn.SaveChanges();

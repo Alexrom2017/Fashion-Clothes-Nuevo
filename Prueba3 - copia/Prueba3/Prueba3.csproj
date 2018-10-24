@@ -115,6 +115,7 @@
     <Content Include="font\fontello.svg" />
     <Content Include="Formulario web1.aspx" />
     <Content Include="Formulario web2.aspx" />
+    <Content Include="Productos Registrados.aspx" />
     <Content Include="Iniciar Sesion.aspx" />
     <Content Include="js\main.js" />
     <Content Include="Model1.Context.tt">
@@ -161,7 +162,6 @@
     <Content Include="Imagenes\Clientes.png" />
     <Content Include="Imagenes\fondo1.jpg" />
     <Content Include="pageregistro.aspx" />
-    <Content Include="pagevistaventas.aspx" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="scripts\bootstrap.min.js" />
@@ -197,6 +197,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DatosEstaticos.cs" />
     <Compile Include="DatosPersonales.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -236,6 +237,13 @@
     </Compile>
     <Compile Include="Formulario web2.aspx.designer.cs">
       <DependentUpon>Formulario web2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos Registrados.aspx.cs">
+      <DependentUpon>Productos Registrados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos Registrados.aspx.designer.cs">
+      <DependentUpon>Productos Registrados.aspx</DependentUpon>
     </Compile>
     <Compile Include="Imagenes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -287,10 +295,6 @@
     </Compile>
     <Compile Include="pageregistro.aspx.cs">
       <DependentUpon>pageregistro.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="pagevistaventas.aspx.cs">
-      <DependentUpon>pagevistaventas.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Productos.cs">

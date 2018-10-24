@@ -17,8 +17,15 @@ namespace Prueba3
 
         public Conexion()
         {
+            try
+            {
             this.cadenaConexion = (@"Data Source=sql7003.site4now.net;Persist Security Info=True;User ID=DB_A4212A_FashionClothes_admin;Password=75082282Alex");
             this.cnn = new SqlConnection(this.cadenaConexion);
+            }catch(SqlException error)
+            {
+                this.mensaje = error.Message +", "+ error.ErrorCode;
+            }
+            
         }
 
         public string Mensaje()

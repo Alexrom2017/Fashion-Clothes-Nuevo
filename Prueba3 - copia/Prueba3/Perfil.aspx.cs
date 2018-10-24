@@ -9,24 +9,23 @@ namespace Prueba3
 {
     public partial class Formulario_web1 : System.Web.UI.Page
     {
-        N1 b1 = new N1();
+        N2 b1 = new N2();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if (b1.Usuarios == null)
+            if (DatosEstaticos.TipoUser != "Cliente" && DatosEstaticos.logeado != true)
             {
-                Response.Redirect("~/Inicio Sesion.aspx");
+                
+                Response.Redirect("~/Iniciar Sesion.aspx");
+            }
+            else this.usuario.Text = new N2().Usuarios.Where(st => st.IdUsuario == DatosEstaticos.IDusuario).First().NickName;
 
-            }
-            else
-            {
-                usuario.Text = Convert.ToString(b1.Usuarios.Where(x => x.IdUsuario == 1).First().NickName);
-            }
+
         }
 
         protected void btnCerrarSesion_Click(object sender, EventArgs e)
         {
-            b1.Usuarios = null;
+            DatosEstaticos.TipoUser = "nada";
+            DatosEstaticos.logeado = false;
             Response.Redirect("~/Iniciar Sesion.aspx");
         }
     }

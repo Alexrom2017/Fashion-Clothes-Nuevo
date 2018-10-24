@@ -16,7 +16,8 @@ namespace Prueba3
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
+            
         }
 
         protected void btnbuscar_Click(object sender, EventArgs e)
@@ -26,7 +27,7 @@ namespace Prueba3
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            var conn = new N1();
+            var conn = new N2();
             SqlConnection n2 = new SqlConnection(cadenaConexion);
             var User1 = new Usuarios()
             {

@@ -13,10 +13,10 @@ namespace Prueba3
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class N1 : DbContext
+    public partial class N2 : DbContext
     {
-        public N1()
-            : base("name=N1")
+        public N2()
+            : base("name=N2")
         {
         }
     
