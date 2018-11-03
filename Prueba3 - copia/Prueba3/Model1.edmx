@@ -20,6 +20,7 @@
           <Property Name="IdCompras" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IdEmpleados" Type="int" Nullable="false" />
           <Property Name="IdProveedores" Type="int" Nullable="false" />
+          <Property Name="FechaCompra" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="DatosPersonales">
           <Key>
@@ -39,7 +40,6 @@
           <Property Name="IdProducto" Type="int" Nullable="false" />
           <Property Name="Unidades" Type="int" Nullable="false" />
           <Property Name="CostoUnitario" Type="money" Nullable="false" />
-          <Property Name="FechaCompra" Type="date" Nullable="false" />
           <Property Name="IdCompras" Type="int" />
         </EntityType>
         <EntityType Name="DetallePedido">
@@ -178,9 +178,11 @@
           <Property Name="Apellido" Type="nchar" MaxLength="30" Nullable="false" />
           <Property Name="NickName" Type="nvarchar" MaxLength="25" Nullable="false" />
           <Property Name="Correo" Type="nchar" MaxLength="30" Nullable="false" />
-          <Property Name="Contraseña" Type="nchar" MaxLength="20" Nullable="false" />
+          <Property Name="Contraseña" Type="nchar" MaxLength="500" Nullable="false" />
           <Property Name="TipoUsuaro" Type="int" Nullable="false" />
           <Property Name="Telefono" Type="nchar" MaxLength="11" Nullable="false" />
+          <Property Name="Direccion" Type="nvarchar" MaxLength="35" />
+          <Property Name="IdImagen" Type="int" />
         </EntityType>
         <Association Name="FK_DetalleCompra_Compras">
           <End Role="Compras" Type="Self.Compras" Multiplicity="0..1" />
@@ -338,6 +340,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_Usuarios_Imagenes">
+          <End Role="Imagenes" Type="Self.Imagenes" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Imagenes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="IdImagen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Usuarios_TiposdeUsuario">
           <End Role="TiposdeUsuario" Type="Self.TiposdeUsuario" Multiplicity="1" />
           <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
@@ -421,6 +435,10 @@
             <End Role="Empresa" EntitySet="Empresa" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
+          <AssociationSet Name="FK_Usuarios_Imagenes" Association="Self.FK_Usuarios_Imagenes">
+            <End Role="Imagenes" EntitySet="Imagenes" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
           <AssociationSet Name="FK_Usuarios_TiposdeUsuario" Association="Self.FK_Usuarios_TiposdeUsuario">
             <End Role="TiposdeUsuario" EntitySet="TiposdeUsuario" />
             <End Role="Usuarios" EntitySet="Usuarios" />
@@ -447,6 +465,7 @@
           <Property Name="IdCompras" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IdEmpleados" Type="Int32" Nullable="false" />
           <Property Name="IdProveedores" Type="Int32" Nullable="false" />
+          <Property Name="FechaCompra" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="DetalleCompra" Relationship="Self.FK_DetalleCompra_Compras" FromRole="Compras" ToRole="DetalleCompra" />
           <NavigationProperty Name="Proveedores" Relationship="Self.Provedores_to_Compras" FromRole="Compras" ToRole="Proveedores" />
         </EntityType>
@@ -468,7 +487,6 @@
           <Property Name="IdProducto" Type="Int32" Nullable="false" />
           <Property Name="Unidades" Type="Int32" Nullable="false" />
           <Property Name="CostoUnitario" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
-          <Property Name="FechaCompra" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="IdCompras" Type="Int32" />
           <NavigationProperty Name="Compras" Relationship="Self.FK_DetalleCompra_Compras" FromRole="DetalleCompra" ToRole="Compras" />
           <NavigationProperty Name="Productos" Relationship="Self.FK_DetalleCompra_Productos" FromRole="DetalleCompra" ToRole="Productos" />
@@ -515,6 +533,7 @@
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Imagen" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <NavigationProperty Name="Usuarios" Relationship="Self.FK_Usuarios_Imagenes" FromRole="Imagenes" ToRole="Usuarios" />
         </EntityType>
         <EntityType Name="Pedidos">
           <Key>
@@ -618,10 +637,13 @@
           <Property Name="Apellido" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="NickName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="Correo" Type="String" MaxLength="30" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Contraseña" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Contraseña" Type="String" MaxLength="500" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="TipoUsuaro" Type="Int32" Nullable="false" />
           <Property Name="Telefono" Type="String" MaxLength="11" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Direccion" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+          <Property Name="IdImagen" Type="Int32" />
           <NavigationProperty Name="Empresa" Relationship="Self.FK_Usuarios_Empresa" FromRole="Usuarios" ToRole="Empresa" />
+          <NavigationProperty Name="Imagenes" Relationship="Self.FK_Usuarios_Imagenes" FromRole="Usuarios" ToRole="Imagenes" />
           <NavigationProperty Name="Pedidos" Relationship="Self.FK_Pedidos_Usuarios" FromRole="Usuarios" ToRole="Pedidos" />
           <NavigationProperty Name="Sugerencias" Relationship="Self.FK_Sugerencias_Usuarios" FromRole="Usuarios" ToRole="Sugerencias" />
           <NavigationProperty Name="TiposdeUsuario" Relationship="Self.FK_Usuarios_TiposdeUsuario" FromRole="Usuarios" ToRole="TiposdeUsuario" />
@@ -695,6 +717,18 @@
             </Principal>
             <Dependent Role="Usuarios">
               <PropertyRef Name="IdEmpresa" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Usuarios_Imagenes">
+          <End Role="Imagenes" Type="Self.Imagenes" Multiplicity="0..1" />
+          <End Role="Usuarios" Type="Self.Usuarios" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Imagenes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Usuarios">
+              <PropertyRef Name="IdImagen" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -774,7 +808,7 @@
           <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="N2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="N3" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CategoriaProducto" EntityType="Self.CategoriaProducto" />
           <EntitySet Name="Compras" EntityType="Self.Compras" />
           <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" />
@@ -816,6 +850,10 @@
             <End Role="Empresa" EntitySet="Empresa" />
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
+          <AssociationSet Name="FK_Usuarios_Imagenes" Association="Self.FK_Usuarios_Imagenes">
+            <End Role="Imagenes" EntitySet="Imagenes" />
+            <End Role="Usuarios" EntitySet="Usuarios" />
+          </AssociationSet>
           <AssociationSet Name="FK_Pedidos_Usuarios" Association="Self.FK_Pedidos_Usuarios">
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Pedidos" EntitySet="Pedidos" />
@@ -850,7 +888,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_A4212A_FashionClothesModelStoreContainer" CdmEntityContainer="N2">
+        <EntityContainerMapping StorageEntityContainer="DB_A4212A_FashionClothesModelStoreContainer" CdmEntityContainer="N3">
           <EntitySetMapping Name="CategoriaProducto">
             <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.CategoriaProducto">
               <MappingFragment StoreEntitySet="CategoriaProducto">
@@ -866,6 +904,7 @@
                 <ScalarProperty Name="IdCompras" ColumnName="IdCompras" />
                 <ScalarProperty Name="IdEmpleados" ColumnName="IdEmpleados" />
                 <ScalarProperty Name="IdProveedores" ColumnName="IdProveedores" />
+                <ScalarProperty Name="FechaCompra" ColumnName="FechaCompra" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -887,7 +926,6 @@
                 <ScalarProperty Name="IdProducto" ColumnName="IdProducto" />
                 <ScalarProperty Name="Unidades" ColumnName="Unidades" />
                 <ScalarProperty Name="CostoUnitario" ColumnName="CostoUnitario" />
-                <ScalarProperty Name="FechaCompra" ColumnName="FechaCompra" />
                 <ScalarProperty Name="IdCompras" ColumnName="IdCompras" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -1034,6 +1072,8 @@
                 <ScalarProperty Name="Contraseña" ColumnName="Contraseña" />
                 <ScalarProperty Name="TipoUsuaro" ColumnName="TipoUsuaro" />
                 <ScalarProperty Name="Telefono" ColumnName="Telefono" />
+                <ScalarProperty Name="Direccion" ColumnName="Direccion" />
+                <ScalarProperty Name="IdImagen" ColumnName="IdImagen" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -18,7 +18,6 @@ namespace Prueba3
         public int IdProducto { get; set; }
         public int Unidades { get; set; }
         public decimal CostoUnitario { get; set; }
-        public System.DateTime FechaCompra { get; set; }
         public Nullable<int> IdCompras { get; set; }
     
         public virtual Compras Compras { get; set; }

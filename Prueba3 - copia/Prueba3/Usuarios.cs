@@ -30,8 +30,11 @@ namespace Prueba3
         public string Contraseña { get; set; }
         public int TipoUsuaro { get; set; }
         public string Telefono { get; set; }
+        public string Direccion { get; set; }
+        public Nullable<int> IdImagen { get; set; }
     
         public virtual Empresa Empresa { get; set; }
+        public virtual Imagenes Imagenes { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedidos> Pedidos { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -115,9 +115,8 @@
     <Content Include="font\fontello.svg" />
     <Content Include="Formulario web1.aspx" />
     <Content Include="Formulario web2.aspx" />
-    <Content Include="Productos Registrados.aspx" />
-    <Content Include="Iniciar Sesion.aspx" />
-    <Content Include="js\main.js" />
+    <Content Include="Imagenes\back.png" />
+    <Content Include="Imagenes\next.png" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
@@ -128,6 +127,9 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="Productos Registrados.aspx" />
+    <Content Include="Iniciar Sesion.aspx" />
+    <Content Include="js\main.js" />
     <Content Include="Perfil.aspx" />
     <Content Include="Imagenes\login.jpg" />
     <Content Include="packages.config" />
@@ -238,30 +240,8 @@
     <Compile Include="Formulario web2.aspx.designer.cs">
       <DependentUpon>Formulario web2.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Productos Registrados.aspx.cs">
-      <DependentUpon>Productos Registrados.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Productos Registrados.aspx.designer.cs">
-      <DependentUpon>Productos Registrados.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Imagenes.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Iniciar Sesion.aspx.cs">
-      <DependentUpon>Iniciar Sesion.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Iniciar Sesion.aspx.designer.cs">
-      <DependentUpon>Iniciar Sesion.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Login1.cs" />
-    <Compile Include="Master administrador.Master.cs">
-      <DependentUpon>Master administrador.Master</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Master administrador.Master.designer.cs">
-      <DependentUpon>Master administrador.Master</DependentUpon>
     </Compile>
     <Compile Include="Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -278,10 +258,32 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="NewFolder1\Usuario.cs" />
     <Compile Include="Pedidos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Productos Registrados.aspx.cs">
+      <DependentUpon>Productos Registrados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos Registrados.aspx.designer.cs">
+      <DependentUpon>Productos Registrados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Iniciar Sesion.aspx.cs">
+      <DependentUpon>Iniciar Sesion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Iniciar Sesion.aspx.designer.cs">
+      <DependentUpon>Iniciar Sesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login1.cs" />
+    <Compile Include="Master administrador.Master.cs">
+      <DependentUpon>Master administrador.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master administrador.Master.designer.cs">
+      <DependentUpon>Master administrador.Master</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Usuario.cs" />
     <Compile Include="Perfil.aspx.cs">
       <DependentUpon>Perfil.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

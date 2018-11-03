@@ -34,7 +34,7 @@
         {
                   %>
                         <!--Opciones Cliente-->
-        <li class="active"><a href="default.aspx">Inicio</a></li>
+        <li ><a href="default.aspx">Inicio</a></li>
         <li><a href="Catalogo.aspx">Catalogo</a></li>
         <li><a href="Perfil.aspx">Perfil</a></li>
         <li><a href="#">Opciones de usuario</a>
@@ -47,7 +47,7 @@
     else if (Prueba3.DatosEstaticos.TipoUser == "Administrador")
     {%>
                             <!--Opciones admin-->
-          <li class="active"><a href="default.aspx">Inicio</a></li>
+          <li ><a href="default.aspx">Inicio</a></li>
           <li><a href="Catalogo.aspx">Catalogo</a></li>
           <li><a href="Perfil.aspx">Perfil</a></li>
             <li><a href="#">Opciones de usuario</a>
@@ -64,9 +64,8 @@
     { %>
          <!--  <li><a href="Perfil.aspx">logeate o comes kk</a></li>-->
         <ul>
-        <li class="active"><a href="default.aspx">Inicio</a></li>
-        <li><a href="Iniciar Sesion.aspx">Iniciar Sesion</a></li>    
-        <li><a href="Catalogo.aspx">Catalogo</a></li>
+        <li ><a href="default.aspx">Inicio</a></li>
+        <li><a href="Iniciar Sesion.aspx">Iniciar Sesion</a></li>  
         <li><a href="Clientes.aspx">Registro</a></li>
         <li><a href="Clientes.aspx">Quienes somos?</a></li>
            

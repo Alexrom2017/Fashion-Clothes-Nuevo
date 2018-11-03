@@ -4,30 +4,31 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="410d687b38f2487fa9b850ce2e7d67fa" Name="Diagram1">
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.CategoriaProducto" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Compras" Width="1.5" PointX="3" PointY="13" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.DatosPersonales" Width="1.5" PointX="7.75" PointY="4.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.DetalleCompra" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.DetallePedido" Width="1.5" PointX="8.25" PointY="8.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Empresa" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.EntregaPedidos" Width="1.5" PointX="9.75" PointY="1.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Imagenes" Width="1.5" PointX="9.75" PointY="5.875" IsExpanded="true" />
+      <Diagram DiagramId="eb92fd17065942f5b0bff3744948aac0" Name="Diagram1">
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.CategoriaProducto" Width="1.5" PointX="0.75" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Compras" Width="1.5" PointX="3" PointY="12" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.DatosPersonales" Width="1.5" PointX="7.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.DetalleCompra" Width="1.5" PointX="5.25" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.DetallePedido" Width="1.5" PointX="8.25" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Empresa" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.EntregaPedidos" Width="1.5" PointX="8.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Imagenes" Width="1.5" PointX="0.75" PointY="11.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Pedidos" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Productos" Width="1.5" PointX="3" PointY="8.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Promociones" Width="1.5" PointX="5.25" PointY="14.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Proveedores" Width="1.5" PointX="5.25" PointY="20" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Stock" Width="1.5" PointX="5.25" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Productos" Width="1.5" PointX="3" PointY="7.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Promociones" Width="1.5" PointX="5.25" PointY="12.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Proveedores" Width="1.5" PointX="5.25" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Stock" Width="1.5" PointX="5.25" PointY="16" IsExpanded="true" />
         <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Sugerencias" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.sysdiagrams" Width="1.5" PointX="10.75" PointY="8.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.TiposdeUsuario" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Usuarios" Width="1.5" PointX="3" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.sysdiagrams" Width="1.5" PointX="9.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.TiposdeUsuario" Width="1.5" PointX="0.75" PointY="13.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DB_A4212A_FashionClothesModel.Usuarios" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="DB_A4212A_FashionClothesModel.FK_Productos_CategoriaProducto1" ManuallyRouted="false" />
         <AssociationConnector Association="DB_A4212A_FashionClothesModel.FK_DetalleCompra_Compras" ManuallyRouted="false" />
         <AssociationConnector Association="DB_A4212A_FashionClothesModel.FK_DetalleCompra_Productos" ManuallyRouted="false" />
         <AssociationConnector Association="DB_A4212A_FashionClothesModel.FK_DetallePedido_Pedidos" ManuallyRouted="false" />
         <AssociationConnector Association="DB_A4212A_FashionClothesModel.FK_DetallePedido_Productos" ManuallyRouted="false" />
         <AssociationConnector Association="DB_A4212A_FashionClothesModel.FK_Usuarios_Empresa" ManuallyRouted="false" />
+        <AssociationConnector Association="DB_A4212A_FashionClothesModel.FK_Usuarios_Imagenes" ManuallyRouted="false" />
         <AssociationConnector Association="DB_A4212A_FashionClothesModel.FK_Pedidos_Usuarios" ManuallyRouted="false" />
         <AssociationConnector Association="DB_A4212A_FashionClothesModel.FK_Promociones_Productos" ManuallyRouted="false" />
         <AssociationConnector Association="DB_A4212A_FashionClothesModel.FK_Stock_Productos" ManuallyRouted="false" />
