@@ -53,14 +53,20 @@
                 <asp:Label ID="Label5" runat="server" Text="Correo" ></asp:Label>
                 <br />
                 <asp:TextBox ID="txtCorreo" runat="server" class="form-control" Width="50%"></asp:TextBox>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" BorderStyle="Dashed" ControlToValidate="txtCorreo" ErrorMessage="Debe ingresar un correo valido" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                <br />
                 <asp:Label ID="Label12" runat="server" Text="Nombre de Usuario" ></asp:Label>
                 <asp:TextBox ID="txtNickName" runat="server" class="form-control" Width="50%"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" BorderStyle="Dashed" ErrorMessage="Debe ingresar un nombre de usuario"></asp:RequiredFieldValidator>
+                <br />
                 <asp:Label ID="Label6" runat="server" Text="Contraseña"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtContraseña" runat="server" class="form-control" Width="50%" EnableTheming="False" TextMode="Password"></asp:TextBox>
                 <%--<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>--%>
                 <asp:Label ID="Label11" runat="server" Text="Confirmar Contraseña"></asp:Label>
                 <asp:TextBox ID="txtConfirmarContraseña" runat="server" class="form-control" Width="50%" TextMode="Password"></asp:TextBox>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" BorderStyle="Dashed" ControlToCompare="txtContraseña" ControlToValidate="txtConfirmarContraseña" ErrorMessage="Las contraseñas no coenciden"></asp:CompareValidator>
+                <br />
                 <asp:Label ID="Label2" runat="server" Text="Direccion:"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtDireccion" runat="server" class="form-control" Width="50%"></asp:TextBox>
