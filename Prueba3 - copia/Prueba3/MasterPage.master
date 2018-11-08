@@ -52,8 +52,8 @@
           <li><a href="Perfil.aspx">Perfil</a></li>
             <li><a href="#">Opciones de usuario</a>
             <ul>
-           <li><a href="~/AgregarProductos.aspx">Agregar Productos</a></li>
-           <li><a href="~/Productos Registrados.aspx">Productos Registrados</a></li>
+           <li><a href="AgregarProductos.aspx">Agregar Productos</a></li>
+           <li><a href="Productos Registrados.aspx">Productos Registrados</a></li>
            <li><a href="#">Usuarios registrados</a></li>  
            <li><a href="pagereporteclientes.aspx">Compras</a></li>            
            <li><a href=" pagevistaventas.aspx">Ventas</a></li>

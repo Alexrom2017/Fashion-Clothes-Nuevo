@@ -1,10 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Clientes.aspx.cs" Inherits="Prueba3.Clientes" %>
-           <%--<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>--%>
-           <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-               <br />
-               <!DOCTYPE html>
 
-        <html>
+    <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+               <br />
         <head>
                <link href="css1/bootstrap.min.css" type="text/css" rel="stylesheet"> 
         </head>
@@ -44,28 +41,22 @@
                 <br />
                 <asp:Label ID="Label1" runat="server" Text="Nombre:"></asp:Label>
                 <asp:TextBox ID="txtNombre" runat="server" class="form-control" Width="50%"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Debe ingresar su nombre" BorderStyle="Dashed"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="Label7" runat="server" Text="Apellido"></asp:Label>
                 <asp:TextBox ID="txtApellido" runat="server" class="form-control" Width="50%"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" BorderStyle="Dashed" ControlToValidate="txtApellido" ErrorMessage="Debe ingresar su apellido"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="Label5" runat="server" Text="Correo" ></asp:Label>
                 <br />
                 <asp:TextBox ID="txtCorreo" runat="server" class="form-control" Width="50%"></asp:TextBox>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" BorderStyle="Dashed" ControlToValidate="txtCorreo" ErrorMessage="Debe ingresar un correo valido" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
                 <br />
                 <asp:Label ID="Label12" runat="server" Text="Nombre de Usuario" ></asp:Label>
                 <asp:TextBox ID="txtNickName" runat="server" class="form-control" Width="50%"></asp:TextBox>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" BorderStyle="Dashed" ErrorMessage="Debe ingresar un nombre de usuario"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="Label6" runat="server" Text="Contraseña"></asp:Label>
                 <br />
                 <asp:TextBox ID="txtContraseña" runat="server" class="form-control" Width="50%" EnableTheming="False" TextMode="Password"></asp:TextBox>
-                <%--<%@ Register assembly="AjaxControlToolkit" namespace="AjaxControlToolkit" tagprefix="ajaxToolkit" %>--%>
                 <asp:Label ID="Label11" runat="server" Text="Confirmar Contraseña"></asp:Label>
                 <asp:TextBox ID="txtConfirmarContraseña" runat="server" class="form-control" Width="50%" TextMode="Password"></asp:TextBox>
-                <asp:CompareValidator ID="CompareValidator1" runat="server" BorderStyle="Dashed" ControlToCompare="txtContraseña" ControlToValidate="txtConfirmarContraseña" ErrorMessage="Las contraseñas no coenciden"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Direccion:"></asp:Label>
                 <br />
@@ -82,5 +73,5 @@
                 </div>
              </div>
          </div>
-        </html>
+    
 </asp:Content>

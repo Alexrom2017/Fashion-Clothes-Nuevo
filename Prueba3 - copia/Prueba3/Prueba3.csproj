@@ -113,8 +113,6 @@
     <Content Include="css2\estilos.css" />
     <Content Include="css2\fontello.css" />
     <Content Include="font\fontello.svg" />
-    <Content Include="Formulario web1.aspx" />
-    <Content Include="Formulario web2.aspx" />
     <Content Include="Imagenes\back.png" />
     <Content Include="Imagenes\next.png" />
     <Content Include="Model1.Context.tt">
@@ -225,20 +223,6 @@
     </Compile>
     <Compile Include="EntregaPedidos.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Formulario web1.aspx.cs">
-      <DependentUpon>Formulario web1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Formulario web1.aspx.designer.cs">
-      <DependentUpon>Formulario web1.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Formulario web2.aspx.cs">
-      <DependentUpon>Formulario web2.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Formulario web2.aspx.designer.cs">
-      <DependentUpon>Formulario web2.aspx</DependentUpon>
     </Compile>
     <Compile Include="Imagenes.cs">
       <DependentUpon>Model1.tt</DependentUpon>

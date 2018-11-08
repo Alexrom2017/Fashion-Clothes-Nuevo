@@ -24,27 +24,22 @@
                     <br />
                         <asp:Label ID="Label4" runat="server" Text="Nombre:"></asp:Label>
                         <asp:TextBox ID="TextNom" runat="server" class="form-control" Width="100%"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" BorderStyle="Dashed" ControlToValidate="TextNom" ErrorMessage="Debe ingresar un nombre"></asp:RequiredFieldValidator>
                     <br />
                     <br />
                         <asp:Label ID="Label2" runat="server" Text="Descripcion:"></asp:Label>
                         <asp:TextBox ID="TextDesp" runat="server" class="form-control" Width="100%"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" BorderStyle="Dashed" ControlToValidate="TextDesp" ErrorMessage="Debe ingresar una descripcion"></asp:RequiredFieldValidator>
                     <br />
                     <br />
                         <asp:Label ID="Label8" runat="server" Text="Proveedores:"></asp:Label>
                         <asp:TextBox ID="TextProe" runat="server" class="form-control" Width="100%"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" BorderStyle="Dashed" ControlToValidate="TextProe" ErrorMessage="Debe ingresar un proveedor"></asp:RequiredFieldValidator>
                     <br />
                     <br />
                         <asp:Label ID="Label5" runat="server" Text="Precio de Compra:"></asp:Label>
                         <asp:TextBox ID="txtPrecioCompra" runat="server" class="form-control" Width="100%"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" BorderStyle="Dashed" ControlToValidate="txtPrecioCompra" ErrorMessage="Debe ingresar un precio de compra"></asp:RequiredFieldValidator>
                     <br />
                     <br />    
                         <asp:Label ID="Label6" runat="server" Text="Precio de Venta:"></asp:Label>
                         <asp:TextBox ID="txtPrecioVenta" runat="server" class="form-control" Width="100%"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" BorderStyle="Dashed" ControlToValidate="txtPrecioVenta" ErrorMessage="Debe ingresar un precio de venta"></asp:RequiredFieldValidator>
                     <br />
                     <br />    
                         <asp:Label ID="Label3" runat="server" Text="Categoria:"></asp:Label>
