@@ -40,6 +40,18 @@
                 <br/>
                 <br />
                 <asp:Label ID="Label1" runat="server" Text="Nombre:"></asp:Label>
+<<<<<<< HEAD
+           <asp:TextBox ID="txtNombre" runat="server" class="form-control" Width="50%"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombre" ErrorMessage="Debe ingresar su nombre" BorderStyle="None" ForeColor="Red"></asp:RequiredFieldValidator>
+                <br />
+                <asp:Label ID="Label7" runat="server" Text="Apellido"></asp:Label>
+           <asp:TextBox ID="txtApellido" runat="server" class="form-control" Width="50%"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" BorderStyle="None" ControlToValidate="txtApellido" ErrorMessage="Debe ingresar su apellido" ForeColor="Red"></asp:RequiredFieldValidator>
+                <br />
+                <asp:Label ID="Label5" runat="server" Text="Correo" ></asp:Label>
+                <br />
+           <asp:TextBox ID="txtCorreo" runat="server" class="form-control" Width="50%"></asp:TextBox>
+=======
                 <asp:TextBox ID="txtNombre" runat="server" class="form-control" Width="50%"></asp:TextBox>
                 <br />
                 <asp:Label ID="Label7" runat="server" Text="Apellido"></asp:Label>
@@ -48,6 +60,7 @@
                 <asp:Label ID="Label5" runat="server" Text="Correo" ></asp:Label>
                 <br />
                 <asp:TextBox ID="txtCorreo" runat="server" class="form-control" Width="50%"></asp:TextBox>
+>>>>>>> 6adc2624c9a73216ed5d8500b48d75284cd76f0d
                 <br />
                 <asp:Label ID="Label12" runat="server" Text="Nombre de Usuario" ></asp:Label>
                 <asp:TextBox ID="txtNickName" runat="server" class="form-control" Width="50%"></asp:TextBox>

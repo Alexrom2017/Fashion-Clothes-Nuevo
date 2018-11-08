@@ -53,10 +53,17 @@
             <li><a href="#">Opciones de usuario</a>
             <ul>
            <li><a href="AgregarProductos.aspx">Agregar Productos</a></li>
+<<<<<<< HEAD
+           <li><a href="AgregarProveedores.aspx">Proveedores</a></li>
+           <li><a href="Usuarios Registrados.aspx">Usuarios Registrados</a></li>  
+           <li><a href="Compras.aspx">Compras</a></li>            
+           <li><a href="Ventas.aspx">Ventas</a></li>
+=======
            <li><a href="Productos Registrados.aspx">Productos Registrados</a></li>
            <li><a href="#">Usuarios registrados</a></li>  
            <li><a href="pagereporteclientes.aspx">Compras</a></li>            
            <li><a href=" pagevistaventas.aspx">Ventas</a></li>
+>>>>>>> 6adc2624c9a73216ed5d8500b48d75284cd76f0d
             </ul>
             </li>
           <% }

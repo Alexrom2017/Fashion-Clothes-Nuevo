@@ -10,16 +10,7 @@
 namespace Prueba3 {
     
     
-    public partial class Formulario_web3 {
-        
-        /// <summary>
-        /// Control Panel1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+    public partial class Ventas_Registradas {
         
         /// <summary>
         /// Control ASPxGridView1.
@@ -31,6 +22,15 @@ namespace Prueba3 {
         protected global::DevExpress.Web.ASPxGridView ASPxGridView1;
         
         /// <summary>
+        /// Control ASPxHyperLink1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxHyperLink ASPxHyperLink1;
+        
+        /// <summary>
         /// Control SqlDataSource1.
         /// </summary>
         /// <remarks>
@@ -38,23 +38,5 @@ namespace Prueba3 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
-        /// <summary>
-        /// Control BootstrapHyperLink2.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink2;
-        
-        /// <summary>
-        /// Control BootstrapHyperLink1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink1;
     }
 }

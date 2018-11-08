@@ -7,17 +7,14 @@ using System.Web.UI.WebControls;
 
 namespace Prueba3
 {
-   
-    public partial class Catalogo : System.Web.UI.Page
+    public partial class AgregarProveedores : System.Web.UI.Page
     {
-
-        public N3 dbproductos = new N3();
         protected void Page_Load(object sender, EventArgs e)
         {
             
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void txtNombre6_TextChanged(object sender, EventArgs e)
         {
 
         }

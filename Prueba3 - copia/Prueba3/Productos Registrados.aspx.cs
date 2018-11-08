@@ -11,7 +11,12 @@ namespace Prueba3
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (DatosEstaticos.TipoUser != "Cliente" && DatosEstaticos.logeado != true)
+            {
 
+                Response.Redirect("~/Iniciar Sesion.aspx");
+            }
+           
         }
     }
 }
