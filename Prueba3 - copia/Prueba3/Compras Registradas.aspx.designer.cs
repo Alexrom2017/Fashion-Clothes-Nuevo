@@ -10,16 +10,7 @@
 namespace Prueba3 {
     
     
-    public partial class Formulario_web3 {
-        
-        /// <summary>
-        /// Control Panel1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+    public partial class Compras_Registradas {
         
         /// <summary>
         /// Control ASPxGridView1.
@@ -40,21 +31,21 @@ namespace Prueba3 {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// Control BootstrapHyperLink2.
+        /// Control BootstrapHyperLink3.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink2;
+        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink3;
         
         /// <summary>
-        /// Control BootstrapHyperLink1.
+        /// Control BootstrapHyperLink4.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink1;
+        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink4;
     }
 }

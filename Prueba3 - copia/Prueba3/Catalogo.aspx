@@ -41,7 +41,7 @@
             <asp:Label ID="PrecioV" runat="server" Text="Label"></asp:Label>
             <% PrecioV.Text = producto.PrecioVenta.ToString();%>
                 <hr />
-                <asp:Button CssClass="btn btn-primary btn-block" ID="Button1" runat="server" Text="Comprar" />
+                <asp:Button CssClass="btn btn-primary btn-block" ID="Button1" runat="server" Text="Comprar" OnClick="Button1_Click" />
              
             </div>
 

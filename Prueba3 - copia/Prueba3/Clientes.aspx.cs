@@ -38,7 +38,7 @@ namespace Prueba3
                 NickName = txtNickName.Text,
                 Contraseña = txtContraseña.Text,
                 TipoUsuaro = 2,
-                //Direccion = txtDireccion.Text,
+                Direccion = txtDireccion.Text,
                 Correo = txtCorreo.Text,
                 Telefono = txtTelefono.Text
             };
@@ -49,7 +49,7 @@ namespace Prueba3
 
             FuploadImgen.PostedFile.InputStream.Read(ImagenOriginal, 0, tamaño);
 
-            Bitmap imagenOriginalBinaria = new Bitmap(FuploadImgen.PostedFile.InputStream);
+            //Bitmap imagenOriginalBinaria = new Bitmap(FuploadImgen.PostedFile.InputStream);
 
             //Insertar en la base de datos
 

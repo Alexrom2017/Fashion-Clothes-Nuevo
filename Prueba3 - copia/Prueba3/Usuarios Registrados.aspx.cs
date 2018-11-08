@@ -7,19 +7,16 @@ using System.Web.UI.WebControls;
 
 namespace Prueba3
 {
-   
-    public partial class Catalogo : System.Web.UI.Page
+    public partial class Usuarios_Registrados : System.Web.UI.Page
     {
-
-        public N3 dbproductos = new N3();
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (DatosEstaticos.TipoUser != "Cliente" && DatosEstaticos.logeado != true)
+            {
 
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
+                Response.Redirect("~/Iniciar Sesion.aspx");
+            }
+            
         }
     }
 }
