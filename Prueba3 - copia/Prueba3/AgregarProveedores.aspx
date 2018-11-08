@@ -26,7 +26,6 @@
                         </dx:ASPxLabel>
                         <br />
            <asp:TextBox ID="TxtNombre" runat="server" class="form-control" Width="50%" Height="21px"></asp:TextBox>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo requerido" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
                         <dx:ASPxLabel ID="ASPxLabel2" runat="server" Text="Dirección" Theme="iOS">
                         </dx:ASPxLabel>

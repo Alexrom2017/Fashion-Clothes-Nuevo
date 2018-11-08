@@ -29,7 +29,7 @@ namespace Prueba3 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
-        
+
         /// <summary>
         /// Control BootstrapHyperLink3.
         /// </summary>
@@ -37,15 +37,7 @@ namespace Prueba3 {
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink3;
-        
-        /// <summary>
-        /// Control BootstrapHyperLink4.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink4;
+
     }
+
 }

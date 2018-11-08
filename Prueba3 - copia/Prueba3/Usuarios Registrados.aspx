@@ -1,10 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Usuarios Registrados.aspx.cs" Inherits="Prueba3.Usuarios_Registrados" %>
 <%@ Register assembly="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-<p>
-    &nbsp;</p>
-    <p>
-    <br />
+
     <dx:ASPxGridView ID="ASPxGridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="IdUsuario" style="font-size: small;  margin-left: 4px" Width="778px" Theme="Material">
 <SettingsAdaptivity>
 <AdaptiveDetailLayoutProperties ColCount="1"></AdaptiveDetailLayoutProperties>

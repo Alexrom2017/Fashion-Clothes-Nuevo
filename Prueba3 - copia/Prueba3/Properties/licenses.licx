@@ -1,11 +1,4 @@
 DevExpress.Web.ASPxButton, DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Web.Bootstrap.BootstrapPopupMenu, DevExpress.Web.Bootstrap.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Web.ASPxPopupControl, DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Web.ASPxButtonEdit, DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Web.ASPxTitleIndex, DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Web.ASPxTextBox, DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Web.Bootstrap.BootstrapTextBox, DevExpress.Web.Bootstrap.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
-DevExpress.Web.ASPxPanel, DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.Web.ASPxLabel, DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.Web.Bootstrap.BootstrapHyperLink, DevExpress.Web.Bootstrap.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
 DevExpress.Web.ASPxHyperLink, DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a
