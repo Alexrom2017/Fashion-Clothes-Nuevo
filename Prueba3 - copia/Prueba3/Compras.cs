@@ -22,7 +22,7 @@ namespace Prueba3
         }
     
         public int IdCompras { get; set; }
-        public int IdEmpleados { get; set; }
+        public int IdUsuario { get; set; }
         public int IdProveedores { get; set; }
         public System.DateTime FechaCompra { get; set; }
     

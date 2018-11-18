@@ -9,7 +9,7 @@ namespace Prueba3
 {
     public partial class Formulario_web1 : System.Web.UI.Page
     {
-        N3 b1 = new N3();
+        N5 b1 = new N5();
         protected void Page_Load(object sender, EventArgs e)
         {
             if (DatosEstaticos.TipoUser != "Cliente" && DatosEstaticos.logeado != true)
@@ -17,7 +17,7 @@ namespace Prueba3
                 
                 Response.Redirect("~/Iniciar Sesion.aspx");
             }
-            else this.usuario.Text = new N3().Usuarios.Where(st => st.IdUsuario == DatosEstaticos.IDusuario).First().NickName;
+            else this.usuario.Text = new N5().Usuarios.Where(st => st.IdUsuario == DatosEstaticos.IDusuario).First().NickName;
 
 
         }

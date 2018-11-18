@@ -23,7 +23,7 @@ namespace Prueba3
 
         protected void BtnAgregar_Click(object sender, EventArgs e)
         {
-            var conn = new N3();
+            var conn = new N5();
             var ventas = new Pedidos()
             {
                 IdUsuario = Convert.ToInt32(TxtIdUsuario.Text),

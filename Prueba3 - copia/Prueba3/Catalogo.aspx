@@ -10,18 +10,19 @@
         <br />
         <asp:Label ID="BuscarP" runat="server" Text="Buscar: "></asp:Label>
 
-        <asp:TextBox class="form-control" Width="40%" ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox CssClass="form-control" Width="40%" ID="TextBox1" runat="server"></asp:TextBox>
         <br />
         <asp:Button CssClass="btn btn-block btn-lg btn-primary" Width="40%" ID="btnBuscar" runat="server" Text="Buscar" />
         <br />
     </div>
       <br />
+    <asp:Button ID="BtnFinalizar" runat="server" CssClass="btn btn-primary btn-block" Text="Efectuar compra" OnClick="BtnFinalizar_Click" />
 
    <div class="container" style="background-color:lightskyblue; border:solid; border-style:solid; width:80%;">
        <br />
         <br />
         <div class="row">
-    <% foreach (var producto in dbproductos.Productos)
+    <% foreach (var producto in new Prueba3.N5().Productos)
         { %>
     <div class="col-md-4">
         <div class="card bg-light" style="width:80%;  margin-left:10%; margin-right:10%;">
@@ -41,7 +42,9 @@
             <asp:Label ID="PrecioV" runat="server" Text="Label"></asp:Label>
             <% PrecioV.Text = producto.PrecioVenta.ToString();%>
                 <hr />
-                <asp:Button CssClass="btn btn-primary btn-block" ID="Button1" runat="server" Text="Comprar" OnClick="Button1_Click" />
+                <asp:HyperLink ID="HyperLink1" CssClass="btn btn-primary btn-block" runat="server">Comprar</asp:HyperLink>
+                <% HyperLink1.NavigateUrl = "Cantidad.aspx?id=" + producto.IdProductos;%>
+                
              
             </div>
 

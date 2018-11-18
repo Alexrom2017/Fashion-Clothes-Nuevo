@@ -27,47 +27,68 @@ namespace Prueba3
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            var conn = new N3();
-            SqlConnection n2 = new SqlConnection(cadenaConexion);
-            var User1 = new Usuarios()
+          
+            if (String.IsNullOrWhiteSpace(txtContraseña.Text) || String.IsNullOrWhiteSpace(txtConfirmarContraseña.Text))
             {
+               LblContraseña.Text = "Ingrese una contraseña";
+            }
+            //else if (txtContraseña.Text != txtConfirmarContraseña.Text)
+            //{
+            //    LblContraseña.Text = "Los datos no coinciden";
+            //}          
+            else
+            {
+                var conn = new N5();
+                SqlConnection n2 = new SqlConnection(cadenaConexion);
 
-                IdEmpresa = 1,
-                Nombre = txtNombre.Text,
-                Apellido = txtApellido.Text,
-                NickName = txtNickName.Text,
-                Contraseña = txtContraseña.Text,
-                TipoUsuaro = 2,
-                Direccion = txtDireccion.Text,
-                Correo = txtCorreo.Text,
-                Telefono = txtTelefono.Text
-            };
+                int i = conn.Usuarios.Where(c => c.NickName.ToUpper() == txtNickName.Text.ToUpper()).ToList().Count;
 
-            var cmd = new SqlCommand(cadenaConexion);
-            int tamaño = FuploadImgen.PostedFile.ContentLength;
-            byte[] ImagenOriginal = new byte[tamaño];
+                if (i != 0)
+                {
+                    LblUsuario.Text = "Ingrese otro nombre de usuario";
+                }
+                else
+                {
+                    var User1 = new Usuarios()
+                    {
 
-            FuploadImgen.PostedFile.InputStream.Read(ImagenOriginal, 0, tamaño);
+                        IdEmpresa = 1,
+                        Nombre = txtNombre.Text,
+                        Apellido = txtApellido.Text,
+                        NickName = txtNickName.Text,
+                        Contraseña = Encriptar.Encrypt(txtContraseña.Text),                        
+                        TipoUsuaro = 1,
+                        Direccion = txtDireccion.Text,
+                        Correo = txtCorreo.Text,
+                        Telefono = txtTelefono.Text
+                    };
 
-            //Bitmap imagenOriginalBinaria = new Bitmap(FuploadImgen.PostedFile.InputStream);
+                    var cmd = new SqlCommand(cadenaConexion);
+                    int tamaño = FuploadImgen.PostedFile.ContentLength;
+                    byte[] ImagenOriginal = new byte[tamaño];
 
-            //Insertar en la base de datos
+                    FuploadImgen.PostedFile.InputStream.Read(ImagenOriginal, 0, tamaño);
 
-            cmd.CommandText = "INSERT INTO Imagenes(Imagen) VALUES (@imagen)";
-            cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = ImagenOriginal;
+                    //Bitmap imagenOriginalBinaria = new Bitmap(FuploadImgen.PostedFile.InputStream);
 
-            cmd.CommandType = CommandType.Text;
-            cmd.Connection = n2;
-            n2.Open();
-            cmd.ExecuteNonQuery();
-            conn.Usuarios.Add(User1);
-            conn.SaveChanges();
-            Response.Redirect("~/Iniciar Sesion.aspx");
+                    //Insertar en la base de datos
+
+                    cmd.CommandText = "INSERT INTO Imagenes(Imagen) VALUES (@imagen)";
+                    cmd.Parameters.Add("@imagen", SqlDbType.Image).Value = ImagenOriginal;
+
+                    cmd.CommandType = CommandType.Text;
+                    cmd.Connection = n2;
+                    n2.Open();
+                    cmd.ExecuteNonQuery();
+                    conn.Usuarios.Add(User1);
+                    conn.SaveChanges();
+                    Response.Redirect("~/Iniciar Sesion.aspx");
+                }
+
+            }    
 
 
             ////****************************************************************************************************************************
-
-
 
         }
 

@@ -21,10 +21,10 @@ namespace Prueba3
 
         protected void BtnAgregar_Click(object sender, EventArgs e)
         {
-            var conn = new N3();
+            var conn = new N5();
             var compras = new Compras()
             {
-                IdEmpleados= Convert.ToInt16(TxtIdEmpleados.Text),
+                IdUsuario= Convert.ToInt16(TxtIdEmpleados.Text),
                 IdProveedores = Convert.ToInt32(TxtIdProveedores.Text),
                 FechaCompra= Convert.ToDateTime(TxtFecha.Text),
             };

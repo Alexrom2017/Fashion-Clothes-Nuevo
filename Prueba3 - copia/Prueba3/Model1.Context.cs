@@ -15,10 +15,10 @@ namespace Prueba3
     using System.Data.Entity.Core.Objects;
     using System.Linq;
     
-    public partial class N3 : DbContext
+    public partial class N5 : DbContext
     {
-        public N3()
-            : base("name=N3")
+        public N5()
+            : base("name=N5")
         {
         }
     

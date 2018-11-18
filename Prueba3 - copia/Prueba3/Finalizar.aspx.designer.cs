@@ -10,42 +10,42 @@
 namespace Prueba3 {
     
     
-    public partial class Compras_Registradas {
+    public partial class Finalizar {
         
         /// <summary>
-        /// Control ASPxGridView1.
+        /// Control txtDestino.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView1;
+        protected global::System.Web.UI.WebControls.TextBox txtDestino;
         
         /// <summary>
-        /// Control SqlDataSource1.
+        /// Control txtDireccion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::System.Web.UI.WebControls.TextBox txtDireccion;
         
         /// <summary>
-        /// Control BootstrapHyperLink3.
+        /// Control txtDepartamento.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink3;
+        protected global::System.Web.UI.WebControls.TextBox txtDepartamento;
         
         /// <summary>
-        /// Control BootstrapHyperLink4.
+        /// Control Button1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink4;
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="DB_A4212A_FashionClothesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="DB_A4212A_FashionClothesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="CategoriaProducto">
           <Key>
             <PropertyRef Name="IdCategoria" />
@@ -18,7 +18,7 @@
             <PropertyRef Name="IdCompras" />
           </Key>
           <Property Name="IdCompras" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="IdEmpleados" Type="int" Nullable="false" />
+          <Property Name="IdUsuario" Type="int" Nullable="false" />
           <Property Name="IdProveedores" Type="int" Nullable="false" />
           <Property Name="FechaCompra" Type="date" Nullable="false" />
         </EntityType>
@@ -103,6 +103,7 @@
           <Property Name="PrecioVenta" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Detalles" Type="nchar" MaxLength="35" Nullable="false" />
           <Property Name="IdCategoria" Type="int" />
+          <Property Name="IdPromociones" Type="int" />
         </EntityType>
         <EntityType Name="Promociones">
           <Key>
@@ -113,7 +114,6 @@
           <Property Name="FechaInicio" Type="date" Nullable="false" />
           <Property Name="FechaFin" Type="date" Nullable="false" />
           <Property Name="Descuento" Type="decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="IdProductos" Type="int" />
         </EntityType>
         <EntityType Name="Provedores-to-Compras">
           <Key>
@@ -256,15 +256,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Promociones_Productos">
-          <End Role="Productos" Type="Self.Productos" Multiplicity="0..1" />
-          <End Role="Promociones" Type="Self.Promociones" Multiplicity="*" />
+        <Association Name="FK_Productos_Promociones">
+          <End Role="Promociones" Type="Self.Promociones" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Productos">
-              <PropertyRef Name="IdProductos" />
+            <Principal Role="Promociones">
+              <PropertyRef Name="IdPromociones" />
             </Principal>
-            <Dependent Role="Promociones">
-              <PropertyRef Name="IdProductos" />
+            <Dependent Role="Productos">
+              <PropertyRef Name="IdPromociones" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -438,9 +438,9 @@
             <End Role="CategoriaProducto" EntitySet="CategoriaProducto" />
             <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
-          <AssociationSet Name="FK_Promociones_Productos" Association="Self.FK_Promociones_Productos">
-            <End Role="Productos" EntitySet="Productos" />
+          <AssociationSet Name="FK_Productos_Promociones" Association="Self.FK_Productos_Promociones">
             <End Role="Promociones" EntitySet="Promociones" />
+            <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
           <AssociationSet Name="FK_Provedores-to-Compras_Compras" Association="Self.FK_Provedores-to-Compras_Compras">
             <End Role="Compras" EntitySet="Compras" />
@@ -475,7 +475,8 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
           </AssociationSet>
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DB_A4212A_FashionClothesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -493,7 +494,7 @@
             <PropertyRef Name="IdCompras" />
           </Key>
           <Property Name="IdCompras" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="IdEmpleados" Type="Int32" Nullable="false" />
+          <Property Name="IdUsuario" Type="Int32" Nullable="false" />
           <Property Name="IdProveedores" Type="Int32" Nullable="false" />
           <Property Name="FechaCompra" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="DetalleCompra" Relationship="Self.FK_DetalleCompra_Compras" FromRole="Compras" ToRole="DetalleCompra" />
@@ -588,10 +589,11 @@
           <Property Name="PrecioVenta" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Detalles" Type="String" MaxLength="35" FixedLength="true" Unicode="true" Nullable="false" />
           <Property Name="IdCategoria" Type="Int32" />
+          <Property Name="IdPromociones" Type="Int32" />
           <NavigationProperty Name="CategoriaProducto" Relationship="Self.FK_Productos_CategoriaProducto1" FromRole="Productos" ToRole="CategoriaProducto" />
           <NavigationProperty Name="DetalleCompra" Relationship="Self.FK_DetalleCompra_Productos" FromRole="Productos" ToRole="DetalleCompra" />
           <NavigationProperty Name="DetallePedido" Relationship="Self.FK_DetallePedido_Productos" FromRole="Productos" ToRole="DetallePedido" />
-          <NavigationProperty Name="Promociones" Relationship="Self.FK_Promociones_Productos" FromRole="Productos" ToRole="Promociones" />
+          <NavigationProperty Name="Promociones" Relationship="Self.FK_Productos_Promociones" FromRole="Productos" ToRole="Promociones" />
           <NavigationProperty Name="Stock" Relationship="Self.FK_Stock_Productos" FromRole="Productos" ToRole="Stock" />
           <NavigationProperty Name="Sugerencias" Relationship="Self.FK_Sugerencias_Productos" FromRole="Productos" ToRole="Sugerencias" />
         </EntityType>
@@ -604,8 +606,7 @@
           <Property Name="FechaInicio" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="FechaFin" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="Descuento" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-          <Property Name="IdProductos" Type="Int32" />
-          <NavigationProperty Name="Productos" Relationship="Self.FK_Promociones_Productos" FromRole="Promociones" ToRole="Productos" />
+          <NavigationProperty Name="Productos" Relationship="Self.FK_Productos_Promociones" FromRole="Promociones" ToRole="Productos" />
         </EntityType>
         <EntityType Name="Proveedores">
           <Key>
@@ -774,15 +775,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Promociones_Productos">
-          <End Role="Productos" Type="Self.Productos" Multiplicity="0..1" />
-          <End Role="Promociones" Type="Self.Promociones" Multiplicity="*" />
+        <Association Name="FK_Productos_Promociones">
+          <End Role="Promociones" Type="Self.Promociones" Multiplicity="0..1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Productos">
-              <PropertyRef Name="IdProductos" />
+            <Principal Role="Promociones">
+              <PropertyRef Name="IdPromociones" />
             </Principal>
-            <Dependent Role="Promociones">
-              <PropertyRef Name="IdProductos" />
+            <Dependent Role="Productos">
+              <PropertyRef Name="IdPromociones" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -838,7 +839,7 @@
           <End Role="Compras" Type="Self.Compras" Multiplicity="*" />
           <End Role="Proveedores" Type="Self.Proveedores" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="N3" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="N5" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="CategoriaProducto" EntityType="Self.CategoriaProducto" />
           <EntitySet Name="Compras" EntityType="Self.Compras" />
           <EntitySet Name="DatosPersonales" EntityType="Self.DatosPersonales" />
@@ -888,9 +889,9 @@
             <End Role="Usuarios" EntitySet="Usuarios" />
             <End Role="Pedidos" EntitySet="Pedidos" />
           </AssociationSet>
-          <AssociationSet Name="FK_Promociones_Productos" Association="Self.FK_Promociones_Productos">
-            <End Role="Productos" EntitySet="Productos" />
+          <AssociationSet Name="FK_Productos_Promociones" Association="Self.FK_Productos_Promociones">
             <End Role="Promociones" EntitySet="Promociones" />
+            <End Role="Productos" EntitySet="Productos" />
           </AssociationSet>
           <AssociationSet Name="FK_Stock_Productos" Association="Self.FK_Stock_Productos">
             <End Role="Productos" EntitySet="Productos" />
@@ -959,7 +960,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="DB_A4212A_FashionClothesModelStoreContainer" CdmEntityContainer="N3">
+        <EntityContainerMapping StorageEntityContainer="DB_A4212A_FashionClothesModelStoreContainer" CdmEntityContainer="N5">
           <EntitySetMapping Name="CategoriaProducto">
             <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.CategoriaProducto">
               <MappingFragment StoreEntitySet="CategoriaProducto">
@@ -973,7 +974,7 @@
             <EntityTypeMapping TypeName="DB_A4212A_FashionClothesModel.Compras">
               <MappingFragment StoreEntitySet="Compras">
                 <ScalarProperty Name="IdCompras" ColumnName="IdCompras" />
-                <ScalarProperty Name="IdEmpleados" ColumnName="IdEmpleados" />
+                <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
                 <ScalarProperty Name="IdProveedores" ColumnName="IdProveedores" />
                 <ScalarProperty Name="FechaCompra" ColumnName="FechaCompra" />
               </MappingFragment>
@@ -1066,6 +1067,7 @@
                 <ScalarProperty Name="PrecioVenta" ColumnName="PrecioVenta" />
                 <ScalarProperty Name="Detalles" ColumnName="Detalles" />
                 <ScalarProperty Name="IdCategoria" ColumnName="IdCategoria" />
+                <ScalarProperty Name="IdPromociones" ColumnName="IdPromociones" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1077,7 +1079,6 @@
                 <ScalarProperty Name="FechaInicio" ColumnName="FechaInicio" />
                 <ScalarProperty Name="FechaFin" ColumnName="FechaFin" />
                 <ScalarProperty Name="Descuento" ColumnName="Descuento" />
-                <ScalarProperty Name="IdProductos" ColumnName="IdProductos" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -1194,7 +1195,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />

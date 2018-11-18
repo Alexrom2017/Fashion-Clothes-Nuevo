@@ -76,6 +76,15 @@ namespace Prueba3 {
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
+        /// Control RequiredFieldValidator1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
         /// Control Label7.
         /// </summary>
         /// <remarks>
@@ -92,6 +101,15 @@ namespace Prueba3 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtApellido;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
         /// Control Label5.
@@ -130,6 +148,15 @@ namespace Prueba3 {
         protected global::System.Web.UI.WebControls.TextBox txtNickName;
         
         /// <summary>
+        /// Control LblUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel LblUsuario;
+        
+        /// <summary>
         /// Control Label6.
         /// </summary>
         /// <remarks>
@@ -146,6 +173,15 @@ namespace Prueba3 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtContraseña;
+        
+        /// <summary>
+        /// Control LblContraseña.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::DevExpress.Web.ASPxLabel LblContraseña;
         
         /// <summary>
         /// Control Label11.
@@ -182,6 +218,15 @@ namespace Prueba3 {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDireccion;
+        
+        /// <summary>
+        /// Control RequiredFieldValidator3.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
         
         /// <summary>
         /// Control Label3.

@@ -28,7 +28,7 @@ namespace Prueba3
         public string pass
         {
             get { return this.contraseña; }
-            set { this.contraseña = value; }
+            set { this.contraseña = Encriptar.Encrypt(value); }
         }
         public bool Buscar()
         {

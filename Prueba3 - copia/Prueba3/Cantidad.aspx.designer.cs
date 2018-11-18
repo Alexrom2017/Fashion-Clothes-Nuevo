@@ -10,16 +10,16 @@
 namespace Prueba3 {
     
     
-    public partial class Compras_Registradas {
+    public partial class Cantidad {
         
         /// <summary>
-        /// Control ASPxGridView1.
+        /// Control ListProveedor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.ASPxGridView ASPxGridView1;
+        protected global::System.Web.UI.WebControls.DropDownList ListProveedor;
         
         /// <summary>
         /// Control SqlDataSource1.
@@ -31,21 +31,21 @@ namespace Prueba3 {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
         
         /// <summary>
-        /// Control BootstrapHyperLink3.
+        /// Control txtCantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink3;
+        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
         
         /// <summary>
-        /// Control BootstrapHyperLink4.
+        /// Control btnCantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::DevExpress.Web.Bootstrap.BootstrapHyperLink BootstrapHyperLink4;
+        protected global::System.Web.UI.WebControls.Button btnCantidad;
     }
 }

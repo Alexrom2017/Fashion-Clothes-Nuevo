@@ -19,7 +19,6 @@ namespace Prueba3
         {
             this.DetalleCompra = new HashSet<DetalleCompra>();
             this.DetallePedido = new HashSet<DetallePedido>();
-            this.Promociones = new HashSet<Promociones>();
             this.Stock = new HashSet<Stock>();
             this.Sugerencias = new HashSet<Sugerencias>();
         }
@@ -30,14 +29,14 @@ namespace Prueba3
         public decimal PrecioVenta { get; set; }
         public string Detalles { get; set; }
         public Nullable<int> IdCategoria { get; set; }
+        public Nullable<int> IdPromociones { get; set; }
     
         public virtual CategoriaProducto CategoriaProducto { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetalleCompra> DetalleCompra { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DetallePedido> DetallePedido { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Promociones> Promociones { get; set; }
+        public virtual Promociones Promociones { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Stock> Stock { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

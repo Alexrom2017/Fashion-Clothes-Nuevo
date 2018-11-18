@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeBehind="Iniciar Sesion.aspx.cs" Inherits="Prueba3.Formulario_web12" %>
+<%@ Register assembly="DevExpress.Web.v18.1, Version=18.1.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web" tagprefix="dx" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <!DOCTYPE html>
@@ -9,24 +10,26 @@
         </head>
         <br />
 
-    <asp:Panel ID="Panel1" runat="server" BackColor="#9D9D93"  >
+    <asp:Panel ID="Panel1" runat="server" BackColor="White"  >
                     <br /> 
                     <center>
-                    <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="#CC00CC" Text="Iniciar Sesion"></asp:Label>
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="Black" Text="Iniciar Sesion" style="font-size: x-large"></asp:Label>
                     <br />
                     <br />
 
-                    <asp:Label ID="Label2" runat="server" ForeColor="#6600CC" Text="Usuario"></asp:Label>
+                    <asp:Label ID="Label2" runat="server" ForeColor="Black" Text="Usuario"></asp:Label>
                   <br />                   
                     <asp:TextBox ID="txtNombreUsuario" runat="server" Width="400px" ForeColor="#3333FF" class="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="txtNombreUsuario" CssClass="alert" ErrorMessage="Ingrese su usuario" ForeColor="Red"></asp:RequiredFieldValidator>
                     <br />
       
             
-                    <asp:Label ID="Label3" runat="server" Text="Contraseña" ForeColor="#6600CC"></asp:Label>
+                    <asp:Label ID="Label3" runat="server" Text="Contraseña" ForeColor="Black"></asp:Label>
                
                     <br />
                
                     <asp:TextBox ID="txtContraseña" runat="server" TextMode="Password" Width="400px" ForeColor="#3333FF" class="form-control"></asp:TextBox>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="txtContraseña" CssClass="alert" ErrorMessage="Ingrese una contraseña" ForeColor="Red"></asp:RequiredFieldValidator>
                         <br />
                     <br />
  

@@ -14,13 +14,19 @@ namespace Prueba3
     
     public partial class Promociones
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Promociones()
+        {
+            this.Productos = new HashSet<Productos>();
+        }
+    
         public int IdPromociones { get; set; }
         public string Nombre { get; set; }
         public System.DateTime FechaInicio { get; set; }
         public System.DateTime FechaFin { get; set; }
         public decimal Descuento { get; set; }
-        public Nullable<int> IdProductos { get; set; }
     
-        public virtual Productos Productos { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Productos> Productos { get; set; }
     }
 }
