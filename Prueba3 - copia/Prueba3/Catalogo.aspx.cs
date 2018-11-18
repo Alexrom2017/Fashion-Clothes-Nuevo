@@ -19,7 +19,7 @@ namespace Prueba3
 
         protected void BtnFinalizar_Click(object sender, EventArgs e)
         {
-            //ESTO ES PARA GENERAR COMPRA DEL LADO DEL ADMINISTRADOR
+            //ESTO ES PARA GENERAR COMPRA DEL LADO DEL ADMINISTRADOR jednke
             if (Session["IdCompra"] == null)
             {
                 Response.Redirect("Catalogo.aspx");
